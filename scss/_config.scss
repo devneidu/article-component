@@ -1,0 +1,16 @@
+$primary-color: #49556B;
+$secondary-color: #EDF2f8;
+$text-color: lighten($primary-color, 20%);
+$screen-lg: 1024;
+$screen-md: 820;
+$screen-sm: 600;
+$screen: 320;
+$font-family: 'Manrope', sans-serif;
+
+.container{
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}

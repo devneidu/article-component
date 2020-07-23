@@ -1,0 +1,86 @@
+$space_amounts: (0, 1, 2, 3, 4, 5);
+
+@media(min-width: 996px){
+    
+}
+@media(min-width: #{$screen-md}px){
+    
+    @each $space in $space_amounts {
+        .p-lg-#{$space}{
+            padding: #{$space}em;
+        }
+        .mt-lg-#{$space}{
+            margin-top: #{$space}em;
+        }
+    }
+    .wrapper{
+        max-width: #{$screen-md}px;
+        .header{
+            line-height: 31px;
+            font-size: 1.5em;
+        }
+    }
+    .wrapper{        
+        min-height: 300px;                                
+        display: flex;
+        
+        .img-drawer{
+            border-top-left-radius: 13px;
+            border-bottom-left-radius: 13px;
+            border-top-right-radius: 0;
+            width: 40%;
+        }
+    }
+    .desktop-share-drawer{
+        background-color: $primary-color;
+        position: absolute;
+        top: -290%;
+        right: -108px;
+        text-align: center;
+        padding: .9em 2em;
+        display: flex;
+        -webkit-box-shadow: -4px 9px 14px -7px rgba(46, 46, 46, 0.87);
+        -moz-box-shadow: -4px 9px 14px -7px rgba(46, 46, 46, 0.87);
+        box-shadow: -4px 9px 14px -7px rgba(46, 46, 46, 0.87);
+        transition: all .4s ease;
+    
+        &:after {
+            width: 0; 
+            height: 0; 
+            border-left: 20px solid transparent;
+            border-right: 20px solid transparent;
+            border-top: 20px solid $primary-color;
+            content: '';
+            position: absolute;
+            left: calc(50% - 20px);
+            top: 48px;
+          }
+    
+        span{
+            color: rgba(255, 255, 255, 0.666);
+            letter-spacing: 8px;
+            font-size: 13px;
+        }
+    
+        ul{
+            display: flex;
+    
+            a{
+                text-decoration: none;
+                margin-left: 15px;
+                img{
+                    width: 20px;
+                }
+            }
+        }
+    }
+    .d-lg-block{
+        display: block;
+    }
+    .d-lg-none{
+        display: none;
+    }
+    .share{
+        margin-top: 10px;
+    }
+}

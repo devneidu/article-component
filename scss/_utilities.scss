@@ -1,0 +1,63 @@
+$space_amounts: (1, 2, 3, 4, 5);
+
+@each $space in $space_amounts {
+    .m-#{$space}{
+        margin: #{$space}em;
+    }
+    .p-#{$space}{
+        padding: #{$space}em;
+    }
+    .my-#{$space}{
+        margin: #{$space}em 0;
+    }
+    .mb-#{$space}{
+        margin-bottom: #{$space/2}em;
+    }
+    .mt-#{$space}{
+        margin-top: #{$space/2}em;
+    }
+}
+
+@for $i from 5 to 15 {
+    .br-#{$i}{
+        border-radius: #{$i}px;
+    }
+    .btlr-#{$i}{
+        border-top-left-radius: #{$i}px;
+    }
+    .bblr-#{$i}{
+        border-bottom-left-radius: #{$i}px;
+    }
+    .btrr-#{$i}{
+        border-top-right-radius: #{$i}px;
+    }
+    .bbrr-#{$i}{
+        border-bottom-right-radius: #{$i}px;
+    }
+}
+
+@for $i from 8 to 20 {
+    .t-#{$i}{
+        font-size: #{$i}px;
+    }
+}
+
+@for $i from 5 to 9 {
+    .b-#{$i}{
+        font-weight: '#{$i}00' !important;
+    }
+}
+
+@for $i from 20 to 32 {
+    .l-#{$i}{
+        line-height: #{$i}px;
+    }
+}
+
+.shadow-lg{
+    box-shadow: 0 0 3rem rgba(0,0,0,.175);
+}
+
+.shadow-md {
+    box-shadow: 0 0 1rem rgba(0,0,0,.15);
+}
